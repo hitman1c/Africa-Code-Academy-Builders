@@ -7,7 +7,7 @@ title: Africa Code Academy Cohort
 
 # Africa Code Academy Cohort
 
-Welcome to our shared cohort home. This site is our collaborative GitHub Pages project for practicing Git, Markdown, pull requests, and public web publishing together.
+Welcome to our shared cohort home. We are building a collaborative GitHub Pages website to learn Git, GitHub, Markdown, pull requests, and team collaboration.
 
 ![Cohort showcase](./WhatsApp%20Image%202026-07-08%20at%2010.57.53%20AM.jpeg)
 
@@ -15,27 +15,21 @@ Welcome to our shared cohort home. This site is our collaborative GitHub Pages p
 
 ## Cohort Snapshot
 
-- Cohort name: Africa Code Academy
+- Cohort name: Africa Code Academy Cohort
 - Start date: 8 July 2026
-- Focus: Build a polished digital space for our learning community
+- Focus: Build a polished digital space for our learning community and practice real-world collaboration
 
 ## What We Are Building
 
-Our team is practicing the complete software collaboration workflow: planning, writing content, reviewing changes, and publishing a public site. This project shows how a group can turn simple Markdown into a professional online presence.
+We are building a collaborative GitHub Pages website to learn Git, GitHub, Markdown, pull requests, and team collaboration. Each member contributes through pull requests while practicing the software development workflow together.
 
 ## Team Members
 
-- [Morena](https://github.com/morenx) — GitHub profile link for Morena.
-- [Seabata](https://github.com/hitman1c) — GitHub profile link for Seabata.
+- [Seabata Sechaba](https://github.com/hitman1c) — GitHub profile README
+- [Morena](https://github.com/morenx) — GitHub profile README
 
 ## How We Work
 
 1. Each teammate contributes through a pull request.
 2. We review each other’s work and improve the site together.
 3. We publish updates so the whole cohort can follow our progress.
-
-## Next Steps
-
-- Replace the placeholder names and links with your real team members.
-- Add screenshots, project highlights, and milestone updates.
-- Publish the site from the main branch and share the live URL with your cohort.

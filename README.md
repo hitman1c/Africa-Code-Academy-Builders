@@ -1,19 +1,12 @@
 # Africa Code Academy Cohort Site
 
-This repository contains a polished GitHub Pages site for the Africa Code Academy cohort. It is built with Markdown and Jekyll so the whole team can contribute through pull requests.
+This repository hosts the GitHub Pages site for the Africa Code Academy Cohort. It is built with Markdown and custom CSS so the team can collaborate, review changes, and publish a polished website together.
 
-## What this project includes
-- A homepage describing the cohort, start date, and mission
-- A simple custom stylesheet for a cleaner presentation
-- A structure that is ready to publish through GitHub Pages
+## Project overview
+- Cohort name: Africa Code Academy Cohort
+- Start date: 8 July 2026
+- Team members: Seabata Sechaba and Morena
+- Purpose: practice Git, GitHub, Markdown, pull requests, and public web publishing
 
-## What to update
-- Replace the placeholder team member links with real GitHub profile links.
-- Add project updates, screenshots, and milestone posts over time.
-- Share the live GitHub Pages URL in your cohort channel once the repository is published.
-
-## GitHub Pages setup
-1. Create a repository named <orgname>.github.io.
-2. Upload these files to the repository.
-3. Open Settings > Pages and publish from the main branch.
-4. Visit the generated URL to view the live site.
+## Publishing
+Once the repository is published through GitHub Pages, the live site can be shared with the cohort.
