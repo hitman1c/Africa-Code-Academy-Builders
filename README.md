@@ -10,3 +10,5 @@ This repository hosts the GitHub Pages site for the Africa Code Academy Cohort. 
 
 ## Publishing
 Once the repository is published through GitHub Pages, the live site can be shared with the cohort.
+
+##this was developed by SECHABA LAPTOP TRACKER
