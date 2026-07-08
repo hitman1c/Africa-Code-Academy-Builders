@@ -23,8 +23,6 @@ Our team is practicing the complete software collaboration workflow: planning, w
 
 - [Morena](https://github.com/morenx) — GitHub profile link for Morena.
 - [Seabata](https://github.com/hitman1c) — GitHub profile link for Seabata.
-- [Kea](https://github.com/your-github-username) — Add your real GitHub profile link here.
-- [Neo](https://github.com/your-github-username) — Add your real GitHub profile link here.
 
 ## How We Work
 
