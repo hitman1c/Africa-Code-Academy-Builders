@@ -9,6 +9,10 @@ title: Africa Code Academy Cohort
 
 Welcome to our shared cohort home. This site is our collaborative GitHub Pages project for practicing Git, Markdown, pull requests, and public web publishing together.
 
+![Cohort showcase](./WhatsApp%20Image%202026-07-08%20at%2010.57.53%20AM.jpeg)
+
+*Featured image from our cohort activity.*
+
 ## Cohort Snapshot
 
 - Cohort name: Africa Code Academy
