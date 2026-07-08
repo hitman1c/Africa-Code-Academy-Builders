@@ -21,10 +21,10 @@ Our team is practicing the complete software collaboration workflow: planning, w
 
 ## Team Members
 
-- [Team Member One](https://github.com/your-github-username) — Add your real GitHub profile link here.
-- [Team Member Two](https://github.com/your-github-username) — Add your real GitHub profile link here.
-- [Team Member Three](https://github.com/your-github-username) — Add your real GitHub profile link here.
-- [Team Member Four](https://github.com/your-github-username) — Add your real GitHub profile link here.
+- [Lerato](https://github.com/your-github-username) — Add your real GitHub profile link here.
+- [Mpho](https://github.com/your-github-username) — Add your real GitHub profile link here.
+- [Kea](https://github.com/your-github-username) — Add your real GitHub profile link here.
+- [Neo](https://github.com/your-github-username) — Add your real GitHub profile link here.
 
 ## How We Work
 
