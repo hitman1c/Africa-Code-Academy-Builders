@@ -4,202 +4,533 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Africa Code Academy Builders</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
   <body>
-    <div class="page-shell">
-      <header class="site-header">
-        <div class="nav-container">
-          <a href="home.html" class="brand">Africa Code Academy</a>
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress"></div>
 
-          <nav class="site-nav">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#cohorts">Cohort</a>
-            <a href="#programs">Programs</a>
-            <a href="#mentors">Mentors</a>
-            <a href="#contact">Contact</a>
-          </nav>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="#" class="navbar-logo">
+          <span class="logo-text">Africa Code Academy</span>
+        </a>
 
-          <div class="site-actions">
-            <a href="login.html" class="button button-outline">Login</a>
-            <a href="#get-started" class="button button-primary">Get Started</a>
-          </div>
+        <button class="mobile-menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="navbar-menu">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#assignments">Assignments</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#mentors">Mentors</a></li>
+          <li><a href="#community">Community</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="navbar-actions">
+          <button class="dark-mode-toggle" aria-label="Toggle dark mode">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
+            </svg>
+          </button>
+          <a href="login.html" class="btn btn-outline">Login</a>
+          <a href="#get-started" class="btn btn-primary">Get Started</a>
         </div>
-      </header>
+      </div>
+    </nav>
 
-      <main class="page-main">
-        <section class="hero-panel" id="home">
-          <div class="hero-copy">
-            <span class="eyebrow">Engineering Residency Program</span>
-            <h1>Build. Learn. Collaborate. Grow.</h1>
-            <p>
-              Join Africa's next generation of software engineers. Build real projects, solve real problems, and become industry ready with a supportive cohort-led experience.
-            </p>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-container">
+        <!-- Left Content -->
+        <div class="hero-content">
+          <h1 class="hero-title">
+            <span class="gradient-1">Build.</span>
+            <span class="gradient-2">Learn.</span>
+            <span class="gradient-3">Collaborate.</span>
+            <span class="gradient-4">Grow.</span>
+          </h1>
 
-            <div class="hero-actions">
-              <a href="#get-started" class="button button-primary">Get Started</a>
-              <a href="#explore" class="button button-outline">Explore Cohort</a>
+          <p class="hero-subtitle">
+            Join Africa's next generation of software engineers through real-world projects, mentorship and collaborative learning.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#get-started" class="btn btn-primary btn-large">
+              Get Started
+              <span class="ripple"></span>
+            </a>
+            <a href="#explore" class="btn btn-outline btn-large">
+              Explore Cohort
+            </a>
+          </div>
+
+          <!-- Student Counter -->
+          <div class="student-counter">
+            <div class="avatar-group">
+              <div class="avatar">A</div>
+              <div class="avatar">C</div>
+              <div class="avatar">B</div>
+              <div class="avatar">+</div>
             </div>
-
-            <div class="hero-meta">
-              <div>
-                <strong>250+</strong>
+            <div class="counter-text">
+              <div class="counter-stat">
+                <span class="counter-number" data-target="250">0</span>+
                 <span>Students Joined</span>
               </div>
-              <div>
-                <strong>80+</strong>
-                <span>Projects Built</span>
-              </div>
-              <div>
-                <strong>25+</strong>
-                <span>Expert Mentors</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="hero-visual">
-            <div class="visual-card">
-              <div class="visual-header">
-                <span>Hero Dashboard</span>
-                <span class="status-pill">Live</span>
-              </div>
-              <div class="visual-content">
-                <div class="visual-panel">
-                  <div class="visual-title">Cohort Project</div>
-                  <div class="visual-pill">Group 4</div>
-                </div>
-                <div class="progress-block">
-                  <span>Progress</span>
-                  <strong>72%</strong>
-                </div>
+              <div class="counter-rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
               </div>
             </div>
-          </div>
-        </section>
-
-        <section class="features-grid" id="about">
-          <article class="feature-card">
-            <h3>Learn by Building</h3>
-            <p>Hands-on projects that teach real-world skills and deepen practical experience.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Team Collaboration</h3>
-            <p>Work with peers, share ideas, and grow together in a collaborative environment.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Real Projects</h3>
-            <p>Solve real problems used in the industry and demonstrate your technical ability.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Career Growth</h3>
-            <p>Mentorship, feedback, and career guidance that helps you progress faster.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Industry Ready</h3>
-            <p>Graduate with the practical skills companies look for in software engineering talent.</p>
-          </article>
-          <article class="feature-card">
-            <h3>Supportive Community</h3>
-            <p>Join a network that supports your journey from learning to launching your career.</p>
-          </article>
-        </section>
-
-        <section class="stats-section">
-          <div>
-            <strong>250+</strong>
-            <span>Active Students</span>
-          </div>
-          <div>
-            <strong>80+</strong>
-            <span>Projects Built</span>
-          </div>
-          <div>
-            <strong>25+</strong>
-            <span>Expert Mentors</span>
-          </div>
-          <div>
-            <strong>98%</strong>
-            <span>Completion Rate</span>
-          </div>
-          <div>
-            <strong>10+</strong>
-            <span>Partner Companies</span>
-          </div>
-        </section>
-
-        <section class="content-grid">
-          <article class="content-card schedule-card">
-            <div class="card-header">
-              <h2>Today's Schedule</h2>
-              <a href="#calendar">View Full Calendar</a>
-            </div>
-            <ul class="schedule-list">
-              <li><span>09:00 AM</span> HTML & CSS <span class="tag live">Live</span></li>
-              <li><span>11:00 AM</span> Git & GitHub Workflow <span class="tag live">Live</span></li>
-              <li><span>01:00 PM</span> Markdown Essentials <span class="tag upcoming">Upcoming</span></li>
-              <li><span>02:30 PM</span> Slack Communication <span class="tag upcoming">Upcoming</span></li>
-              <li><span>04:00 PM</span> Engineering Residency <span class="tag upcoming">Upcoming</span></li>
-            </ul>
-          </article>
-
-          <article class="content-card testimonial-card">
-            <div class="card-header">
-              <h2>Why Students Love ACA</h2>
-              <a href="#testimonials">View All Testimonials</a>
-            </div>
-            <blockquote>
-              "Africa Code Academy transformed my career. The hands-on approach and supportive mentors made all the difference!"
-            </blockquote>
-            <div class="testimonial-author">
-              <div class="avatar">TS</div>
-              <div>
-                <strong>Thato Mokoena</strong>
-                <span>Frontend Developer at PayFast</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="content-card cohort-card" id="cohorts">
-            <div class="card-header">
-              <h2>Cohort Highlights</h2>
-              <a href="#cohorts">View Cohorts</a>
-            </div>
-            <div class="cohort-summary">
-              <p><strong>Current Cohort</strong></p>
-              <h3>Cohort 4.0</h3>
-              <p>Jan 2025 - Jun 2025</p>
-            </div>
-            <div class="cohort-progress">
-              <span>72%</span>
-              <div class="progress-track"><div class="progress-fill"></div></div>
-            </div>
-            <div class="cohort-tags">
-              <span>Web Development</span>
-              <span>Team Projects</span>
-              <span>Mentorship</span>
-              <span>Career Support</span>
-            </div>
-          </article>
-        </section>
-      </main>
-
-      <footer class="site-footer" id="contact">
-        <div class="footer-content">
-          <div>
-            <strong>Africa Code Academy</strong>
-            <p>Building the next generation of African tech leaders.</p>
-          </div>
-          <div class="footer-links">
-            <a href="#about">About Us</a>
-            <a href="#programs">Programs</a>
-            <a href="#cohorts">Cohorts</a>
-            <a href="#mentors">Mentors</a>
-            <a href="#contact">Contact</a>
           </div>
         </div>
-        <p class="footer-note">© 2026 Africa Code Academy. All rights reserved.</p>
-      </footer>
-    </div>
+
+        <!-- Right - Animated Workspace -->
+        <div class="hero-workspace">
+          <div class="workspace-container">
+            <!-- Floating Monitors -->
+            <div class="monitor monitor-1">
+              <div class="monitor-header">
+                <div class="monitor-dot red"></div>
+                <div class="monitor-dot yellow"></div>
+                <div class="monitor-dot green"></div>
+              </div>
+              <div class="monitor-content">
+                <div class="code-snippet">
+                  <div class="code-line"><span class="code-keyword">const</span> future = <span class="code-string">'bright'</span>;</div>
+                  <div class="code-line"><span class="code-keyword">let</span> skills = <span class="code-bracket">[</span></div>
+                  <div class="code-line">&nbsp;&nbsp;<span class="code-string">'React'</span>,</div>
+                  <div class="code-line">&nbsp;&nbsp;<span class="code-string">'Node'</span>,</div>
+                  <div class="code-line"><span class="code-bracket">]</span>;</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="monitor monitor-2">
+              <div class="monitor-header">
+                <div class="monitor-dot red"></div>
+                <div class="monitor-dot yellow"></div>
+                <div class="monitor-dot green"></div>
+              </div>
+              <div class="monitor-content github-view">
+                <div class="github-header">
+                  <span>● main</span>
+                  <span>2 branches</span>
+                </div>
+                <div class="commit-item">
+                  <span class="commit-hash">a3f4b2e</span>
+                  <span class="commit-msg">feat: Add new features</span>
+                </div>
+                <div class="commit-item">
+                  <span class="commit-hash">f8c1d9a</span>
+                  <span class="commit-msg">fix: Bug resolution</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="monitor monitor-3">
+              <div class="monitor-header">
+                <div class="monitor-dot red"></div>
+                <div class="monitor-dot yellow"></div>
+                <div class="monitor-dot green"></div>
+              </div>
+              <div class="monitor-content dashboard-view">
+                <div class="dashboard-stat">
+                  <span class="stat-value">1,234</span>
+                  <span class="stat-label">Users</span>
+                </div>
+                <div class="dashboard-stat">
+                  <span class="stat-value">89%</span>
+                  <span class="stat-label">Growth</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Technology Icons -->
+            <div class="floating-icons">
+              <div class="icon-float icon-1">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c6.627 0 12 5.373 12 12s-5.373 12-12 12S0 18.627 0 12 5.373 0 12 0z"/></svg>
+                <span>GitHub</span>
+              </div>
+              <div class="icon-float icon-2">
+                <svg viewBox="0 0 24 24" fill="currentColor"><rect width="24" height="24" rx="4"/></svg>
+                <span>HTML</span>
+              </div>
+              <div class="icon-float icon-3">
+                <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="12"/></svg>
+                <span>CSS</span>
+              </div>
+              <div class="icon-float icon-4">
+                <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12,2 22,20 2,20"/></svg>
+                <span>JavaScript</span>
+              </div>
+              <div class="icon-float icon-5">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z"/></svg>
+                <span>React</span>
+              </div>
+              <div class="icon-float icon-6">
+                <svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+                <span>Node</span>
+              </div>
+            </div>
+
+            <!-- Animated Grid Background -->
+            <div class="animated-grid"></div>
+
+            <!-- Gradient Circles -->
+            <div class="gradient-blob blob-1"></div>
+            <div class="gradient-blob blob-2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature Cards Section -->
+    <section class="features" id="features">
+      <div class="features-container">
+        <h2 class="section-title">Why Choose Africa Code Academy</h2>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">🏗️</div>
+            <h3>Learn by Building</h3>
+            <p>Hands-on projects that teach real-world skills and deepen practical experience.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">👥</div>
+            <h3>Team Collaboration</h3>
+            <p>Work with peers on Slack & GitHub. Share ideas and grow together in a collaborative environment.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🚀</div>
+            <h3>Real Projects</h3>
+            <p>Solve real problems used in the industry and demonstrate your technical ability.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">📈</div>
+            <h3>Career Growth</h3>
+            <p>Mentorship, feedback, and career guidance that helps you progress faster.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">💼</div>
+            <h3>Industry Ready</h3>
+            <p>Graduate with the practical skills companies look for in software engineering talent.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🌍</div>
+            <h3>Supportive Community</h3>
+            <p>Join a network that supports your journey from learning to launching your career.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="statistics" id="stats">
+      <div class="stats-container">
+        <div class="stat-card">
+          <div class="stat-number" data-target="250">0</div>
+          <div class="stat-label">Students</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-number" data-target="80">0</div>
+          <div class="stat-label">Projects</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-number" data-target="25">0</div>
+          <div class="stat-label">Mentors</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-number" data-target="98">0</div>
+          <div class="stat-label">Completion %</div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-number" data-target="10">0</div>
+          <div class="stat-label">Companies</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="schedule" id="schedule">
+      <div class="schedule-container">
+        <h2 class="section-title">Today's Schedule</h2>
+
+        <div class="schedule-grid">
+          <div class="schedule-card">
+            <div class="schedule-time">09:00</div>
+            <div class="schedule-content">
+              <h3>HTML & CSS</h3>
+              <span class="badge badge-live">Live</span>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-time">11:00</div>
+            <div class="schedule-content">
+              <h3>Git & GitHub Workflow</h3>
+              <span class="badge badge-live">Live</span>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-time">13:00</div>
+            <div class="schedule-content">
+              <h3>Markdown Essentials</h3>
+              <span class="badge badge-upcoming">Upcoming</span>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-time">14:30</div>
+            <div class="schedule-content">
+              <h3>Slack Communication</h3>
+              <span class="badge badge-upcoming">Upcoming</span>
+            </div>
+          </div>
+
+          <div class="schedule-card">
+            <div class="schedule-time">16:00</div>
+            <div class="schedule-content">
+              <h3>Engineering Residency</h3>
+              <span class="badge badge-upcoming">Upcoming</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+      <div class="testimonials-container">
+        <h2 class="section-title">Why Students Love ACA</h2>
+
+        <div class="testimonial-slider">
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+            </div>
+            <p class="testimonial-quote">
+              "Africa Code Academy transformed my career. The hands-on approach and supportive mentors made all the difference!"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">TS</div>
+              <div>
+                <h4>Thato Mokoena</h4>
+                <p>Frontend Developer at PayFast</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+            </div>
+            <p class="testimonial-quote">
+              "The curriculum is industry-relevant and the mentorship program helped me land my dream job within weeks."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">KC</div>
+              <div>
+                <h4>Kamau Che</h4>
+                <p>Full Stack Engineer at Google</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+            </div>
+            <p class="testimonial-quote">
+              "The community here is amazing. You're never alone in your coding journey. Everyone helps each other succeed."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar">AM</div>
+              <div>
+                <h4>Amara Mensah</h4>
+                <p>Software Developer at Microsoft</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-dots">
+          <button class="dot active" onclick="currentSlide(0)"></button>
+          <button class="dot" onclick="currentSlide(1)"></button>
+          <button class="dot" onclick="currentSlide(2)"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cohort Progress Section -->
+    <section class="cohort" id="cohorts">
+      <div class="cohort-container">
+        <div class="cohort-content">
+          <h2 class="section-title">Current Cohort</h2>
+          <h3 class="cohort-name">Cohort 4.0</h3>
+          <p class="cohort-dates">January 2025 - June 2025</p>
+
+          <div class="cohort-tags">
+            <span class="tag">Web Development</span>
+            <span class="tag">Team Projects</span>
+            <span class="tag">Mentorship</span>
+            <span class="tag">Career Support</span>
+          </div>
+        </div>
+
+        <div class="cohort-progress-container">
+          <div class="circular-progress">
+            <svg class="progress-circle" width="200" height="200">
+              <circle cx="100" cy="100" r="90" class="progress-bg" />
+              <circle cx="100" cy="100" r="90" class="progress-fill" style="stroke-dasharray: 0, 565.5" />
+            </svg>
+            <div class="progress-text">
+              <span class="progress-number">72%</span>
+              <span class="progress-label">Complete</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Learning Paths Section -->
+    <section class="learning-paths" id="learning">
+      <div class="learning-container">
+        <h2 class="section-title">Learning Paths</h2>
+
+        <div class="paths-grid">
+          <div class="path-card">
+            <h3>HTML</h3>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 85%"></div>
+            </div>
+            <span class="progress-text">85%</span>
+          </div>
+
+          <div class="path-card">
+            <h3>CSS</h3>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 78%"></div>
+            </div>
+            <span class="progress-text">78%</span>
+          </div>
+
+          <div class="path-card">
+            <h3>JavaScript</h3>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 42%"></div>
+            </div>
+            <span class="progress-text">42%</span>
+          </div>
+
+          <div class="path-card">
+            <h3>Git & GitHub</h3>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 100%"></div>
+            </div>
+            <span class="progress-text">100%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="get-started">
+      <div class="cta-container">
+        <h2>Ready to become an industry-ready software engineer?</h2>
+        <a href="#" class="btn btn-primary btn-large">Join Engineering Residency</a>
+        
+        <div class="animated-blobs">
+          <div class="blob blob-cta-1"></div>
+          <div class="blob blob-cta-2"></div>
+          <div class="blob blob-cta-3"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h4>Africa Code Academy</h4>
+            <p>Building the next generation of African tech leaders through collaborative learning and real-world projects.</p>
+          </div>
+
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#">Documentation</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4>Newsletter</h4>
+            <p>Stay updated with our latest courses and community news.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Enter your email" required />
+              <button type="submit" class="btn btn-primary btn-small">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>Made with ❤️ in Africa | © 2026 Africa Code Academy. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/assets/js/script.js"></script>
   </body>
 </html>
