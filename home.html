@@ -3,98 +3,203 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Africa Code Academy Cohort</title>
+    <title>Africa Code Academy Builders</title>
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <header class="topbar">
-      <div class="container topbar-inner">
-        <div class="brand">Africa Code Academy Cohort</div>
-        <nav class="nav-links">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#team">Team</a>
-          <a href="#work">Our Work</a>
-          <a href="#links">Links</a>
-          <a class="button button-outline" href="index.html">Home Page</a>
-        </nav>
-      </div>
-    </header>
+    <div class="page-shell">
+      <header class="site-header">
+        <div class="nav-container">
+          <a href="home.html" class="brand">Africa Code Academy</a>
 
-    <main class="container">
-      <section id="home" class="hero-section">
-        <h1>Africa Code Academy Cohort</h1>
-        <p>We are building a collaborative GitHub Pages website to learn Git, GitHub, Markdown, pull requests, and teamwork together.</p>
-      </section>
+          <nav class="site-nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#cohorts">Cohort</a>
+            <a href="#programs">Programs</a>
+            <a href="#mentors">Mentors</a>
+            <a href="#contact">Contact</a>
+          </nav>
 
-      <section id="about" class="content-card">
-        <div class="section-header">
-          <div class="section-icon">ℹ️</div>
-          <h2>About Our Cohort</h2>
+          <div class="site-actions">
+            <a href="login.html" class="button button-outline">Login</a>
+            <a href="#get-started" class="button button-primary">Get Started</a>
+          </div>
         </div>
-        <div class="field-row">
-          <div class="field-label">Cohort Name:</div>
-          <div>Africa Code Academy Cohort</div>
-        </div>
-        <div class="field-row">
-          <div class="field-label">Start Date:</div>
-          <div>8 July 2026</div>
-        </div>
-        <div class="field-row">
-          <div class="field-label">Description:</div>
-          <div>We are building a collaborative GitHub Pages website to practice software development workflows, share our learning journey, and publish our work publicly.</div>
-        </div>
-      </section>
+      </header>
 
-      <section id="team" class="content-card">
-        <div class="section-header">
-          <div class="section-icon">👥</div>
-          <h2>Our Team Members</h2>
-        </div>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>GitHub</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Seabata Sechaba</td>
-                <td><a href="https://github.com/hitman1c">github.com/hitman1c</a></td>
-              </tr>
-              <tr>
-                <td>Morena</td>
-                <td><a href="https://github.com/morenx">github.com/morenx</a></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
+      <main class="page-main">
+        <section class="hero-panel" id="home">
+          <div class="hero-copy">
+            <span class="eyebrow">Engineering Residency Program</span>
+            <h1>Build. Learn. Collaborate. Grow.</h1>
+            <p>
+              Join Africa's next generation of software engineers. Build real projects, solve real problems, and become industry ready with a supportive cohort-led experience.
+            </p>
 
-      <section id="work" class="content-card">
-        <div class="section-header">
-          <div class="section-icon">🚀</div>
-          <h2>What We Are Building</h2>
-        </div>
-        <div class="feature-box">
-          <p>We are creating a collaborative GitHub Pages website to practice Git, GitHub, Markdown, pull requests, and public web publishing. Each member contributes through pull requests while building a polished online presence for the cohort.</p>
-        </div>
-      </section>
+            <div class="hero-actions">
+              <a href="#get-started" class="button button-primary">Get Started</a>
+              <a href="#explore" class="button button-outline">Explore Cohort</a>
+            </div>
 
-      <section id="links" class="content-card">
-        <div class="section-header">
-          <div class="section-icon">🔗</div>
-          <h2>Links</h2>
-        </div>
-        <p>GitHub Organization:</p>
-        <p><a href="https://github.com/africacodeacademy">https://github.com/africacodeacademy</a></p>
-      </section>
-    </main>
+            <div class="hero-meta">
+              <div>
+                <strong>250+</strong>
+                <span>Students Joined</span>
+              </div>
+              <div>
+                <strong>80+</strong>
+                <span>Projects Built</span>
+              </div>
+              <div>
+                <strong>25+</strong>
+                <span>Expert Mentors</span>
+              </div>
+            </div>
+          </div>
 
-    <footer class="page-footer">
-      <p>Africa Code Academy © 2026</p>
-    </footer>
+          <div class="hero-visual">
+            <div class="visual-card">
+              <div class="visual-header">
+                <span>Hero Dashboard</span>
+                <span class="status-pill">Live</span>
+              </div>
+              <div class="visual-content">
+                <div class="visual-panel">
+                  <div class="visual-title">Cohort Project</div>
+                  <div class="visual-pill">Group 4</div>
+                </div>
+                <div class="progress-block">
+                  <span>Progress</span>
+                  <strong>72%</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="features-grid" id="about">
+          <article class="feature-card">
+            <h3>Learn by Building</h3>
+            <p>Hands-on projects that teach real-world skills and deepen practical experience.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Team Collaboration</h3>
+            <p>Work with peers, share ideas, and grow together in a collaborative environment.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Real Projects</h3>
+            <p>Solve real problems used in the industry and demonstrate your technical ability.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Career Growth</h3>
+            <p>Mentorship, feedback, and career guidance that helps you progress faster.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Industry Ready</h3>
+            <p>Graduate with the practical skills companies look for in software engineering talent.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Supportive Community</h3>
+            <p>Join a network that supports your journey from learning to launching your career.</p>
+          </article>
+        </section>
+
+        <section class="stats-section">
+          <div>
+            <strong>250+</strong>
+            <span>Active Students</span>
+          </div>
+          <div>
+            <strong>80+</strong>
+            <span>Projects Built</span>
+          </div>
+          <div>
+            <strong>25+</strong>
+            <span>Expert Mentors</span>
+          </div>
+          <div>
+            <strong>98%</strong>
+            <span>Completion Rate</span>
+          </div>
+          <div>
+            <strong>10+</strong>
+            <span>Partner Companies</span>
+          </div>
+        </section>
+
+        <section class="content-grid">
+          <article class="content-card schedule-card">
+            <div class="card-header">
+              <h2>Today's Schedule</h2>
+              <a href="#calendar">View Full Calendar</a>
+            </div>
+            <ul class="schedule-list">
+              <li><span>09:00 AM</span> HTML & CSS <span class="tag live">Live</span></li>
+              <li><span>11:00 AM</span> Git & GitHub Workflow <span class="tag live">Live</span></li>
+              <li><span>01:00 PM</span> Markdown Essentials <span class="tag upcoming">Upcoming</span></li>
+              <li><span>02:30 PM</span> Slack Communication <span class="tag upcoming">Upcoming</span></li>
+              <li><span>04:00 PM</span> Engineering Residency <span class="tag upcoming">Upcoming</span></li>
+            </ul>
+          </article>
+
+          <article class="content-card testimonial-card">
+            <div class="card-header">
+              <h2>Why Students Love ACA</h2>
+              <a href="#testimonials">View All Testimonials</a>
+            </div>
+            <blockquote>
+              “Africa Code Academy transformed my career. The hands-on approach and supportive mentors made all the difference!”
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="avatar">TS</div>
+              <div>
+                <strong>Thato Mokoena</strong>
+                <span>Frontend Developer at PayFast</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="content-card cohort-card" id="cohorts">
+            <div class="card-header">
+              <h2>Cohort Highlights</h2>
+              <a href="#cohorts">View Cohorts</a>
+            </div>
+            <div class="cohort-summary">
+              <p><strong>Current Cohort</strong></p>
+              <h3>Cohort 4.0</h3>
+              <p>Jan 2025 - Jun 2025</p>
+            </div>
+            <div class="cohort-progress">
+              <span>72%</span>
+              <div class="progress-track"><div class="progress-fill"></div></div>
+            </div>
+            <div class="cohort-tags">
+              <span>Web Development</span>
+              <span>Team Projects</span>
+              <span>Mentorship</span>
+              <span>Career Support</span>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <footer class="site-footer" id="contact">
+        <div class="footer-content">
+          <div>
+            <strong>Africa Code Academy</strong>
+            <p>Building the next generation of African tech leaders.</p>
+          </div>
+          <div class="footer-links">
+            <a href="#about">About Us</a>
+            <a href="#programs">Programs</a>
+            <a href="#cohorts">Cohorts</a>
+            <a href="#mentors">Mentors</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+        <p class="footer-note">© 2026 Africa Code Academy. All rights reserved.</p>
+      </footer>
+    </div>
   </body>
 </html>
