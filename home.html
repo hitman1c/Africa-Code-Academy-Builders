@@ -3,98 +3,804 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Africa Code Academy Cohort</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Africa Code Academy Builders</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
-  <body>
-    <header class="topbar">
-      <div class="container topbar-inner">
-        <div class="brand">Africa Code Academy Cohort</div>
-        <nav class="nav-links">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#team">Team</a>
-          <a href="#work">Our Work</a>
-          <a href="#links">Links</a>
-          <a class="button button-outline" href="index.html">Home Page</a>
-        </nav>
+  <body class="home-page">
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <a href="#" class="navbar-logo">
+          <span class="logo-icon">&lt;/&gt;</span>
+          <span class="logo-text">Africa Code Academy</span>
+        </a>
+
+        <button class="mobile-menu-toggle" id="mobileMenuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="navbar-menu" id="navbarMenu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#features" class="nav-link">Why ACA</a></li>
+          <li><a href="#programs" class="nav-link">Programs</a></li>
+          <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
+          <li><a href="#community" class="nav-link">Community</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="navbar-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <i class="fas fa-sun"></i>
+          </button>
+          <a href="login.html" class="btn btn-outline">Login</a>
+          <a href="#get-started" class="btn btn-primary">Get Started</a>
+        </div>
       </div>
-    </header>
+    </nav>
 
-    <main class="container">
-      <section id="home" class="hero-section">
-        <h1>Africa Code Academy Cohort</h1>
-        <p>We are building a collaborative GitHub Pages website to learn Git, GitHub, Markdown, pull requests, and teamwork together.</p>
-      </section>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-background">
+        <div class="grid-bg"></div>
+        <div class="particles"></div>
+        <div class="gradient-orbs">
+          <div class="orb orb-1"></div>
+          <div class="orb orb-2"></div>
+          <div class="orb orb-3"></div>
+        </div>
+        <div class="floating-code-symbols">
+          <span class="code-symbol">&lt;/&gt;</span>
+          <span class="code-symbol">{}</span>
+          <span class="code-symbol">()</span>
+          <span class="code-symbol">#</span>
+          <span class="code-symbol">;</span>
+        </div>
+      </div>
 
-      <section id="about" class="content-card">
-        <div class="section-header">
-          <div class="section-icon">ℹ️</div>
-          <h2>About Our Cohort</h2>
-        </div>
-        <div class="field-row">
-          <div class="field-label">Cohort Name:</div>
-          <div>Africa Code Academy Cohort</div>
-        </div>
-        <div class="field-row">
-          <div class="field-label">Start Date:</div>
-          <div>8 July 2026</div>
-        </div>
-        <div class="field-row">
-          <div class="field-label">Description:</div>
-          <div>We are building a collaborative GitHub Pages website to practice software development workflows, share our learning journey, and publish our work publicly.</div>
-        </div>
-      </section>
+      <div class="hero-container">
+        <!-- Left Content -->
+        <div class="hero-content">
+          <h1 class="hero-title">
+            <span class="gradient-text gradient-1">Build.</span>
+            <span class="gradient-text gradient-2">Learn.</span>
+            <span class="gradient-text gradient-3">Collaborate.</span>
+            <span class="gradient-text gradient-4">Grow.</span>
+          </h1>
 
-      <section id="team" class="content-card">
-        <div class="section-header">
-          <div class="section-icon">👥</div>
-          <h2>Our Team Members</h2>
-        </div>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>GitHub</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Seabata Sechaba</td>
-                <td><a href="https://github.com/hitman1c">github.com/hitman1c</a></td>
-              </tr>
-              <tr>
-                <td>Morena</td>
-                <td><a href="https://github.com/morenx">github.com/morenx</a></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
+          <p class="hero-subtitle">
+            Join Africa's next generation of software engineers through real-world projects, mentorship, and collaborative learning.
+          </p>
 
-      <section id="work" class="content-card">
-        <div class="section-header">
-          <div class="section-icon">🚀</div>
-          <h2>What We Are Building</h2>
-        </div>
-        <div class="feature-box">
-          <p>We are creating a collaborative GitHub Pages website to practice Git, GitHub, Markdown, pull requests, and public web publishing. Each member contributes through pull requests while building a polished online presence for the cohort.</p>
-        </div>
-      </section>
+          <div class="hero-buttons">
+            <a href="#get-started" class="btn btn-primary btn-large">
+              <span>Get Started</span>
+              <i class="fas fa-arrow-right"></i>
+              <span class="ripple"></span>
+            </a>
+            <a href="#programs" class="btn btn-outline btn-large">
+              <span>Explore Programs</span>
+            </a>
+          </div>
 
-      <section id="links" class="content-card">
-        <div class="section-header">
-          <div class="section-icon">🔗</div>
-          <h2>Links</h2>
+          <!-- Student Avatars -->
+          <div class="student-avatars">
+            <div class="avatars-group">
+              <div class="avatar avatar-1">A</div>
+              <div class="avatar avatar-2">C</div>
+              <div class="avatar avatar-3">B</div>
+              <div class="avatar avatar-4">D</div>
+              <div class="avatar avatar-5">E</div>
+            </div>
+            <div class="avatars-info">
+              <div class="avatars-count">250+ Students Joined</div>
+              <div class="avatars-rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+          </div>
         </div>
-        <p>GitHub Organization:</p>
-        <p><a href="https://github.com/africacodeacademy">https://github.com/africacodeacademy</a></p>
-      </section>
-    </main>
 
-    <footer class="page-footer">
-      <p>Africa Code Academy © 2026</p>
+        <!-- Right - Developer Workspace -->
+        <div class="hero-workspace">
+          <div class="workspace-container">
+            <!-- Large Laptop Mockup -->
+            <div class="laptop-mockup">
+              <div class="laptop-screen">
+                <div class="vscode-window">
+                  <div class="window-header">
+                    <span class="window-title">VS Code • Africa Code Academy</span>
+                    <div class="window-controls">
+                      <span class="control red"></span>
+                      <span class="control yellow"></span>
+                      <span class="control green"></span>
+                    </div>
+                  </div>
+                  <div class="window-content">
+                    <div class="code-editor">
+                      <div class="code-line"><span class="keyword">const</span> <span class="variable">future</span> = <span class="string">'bright'</span>;</div>
+                      <div class="code-line"><span class="keyword">let</span> <span class="variable">skills</span> = [</div>
+                      <div class="code-line indent">"<span class="string">React</span>", "<span class="string">Node</span>", "<span class="string">Git</span>"</div>
+                      <div class="code-line">];</div>
+                      <div class="code-line"><span class="keyword">await</span> <span class="variable">buildSomethingAmazing</span>();</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="laptop-base"></div>
+            </div>
+
+            <!-- Floating Dashboard Card -->
+            <div class="floating-card card-github">
+              <div class="card-header">
+                <i class="fab fa-github"></i>
+                <span>GitHub Activity</span>
+              </div>
+              <div class="card-body">
+                <div class="commit-item">
+                  <span class="commit-hash">a3f4b2e</span>
+                  <span class="commit-msg">feat: Add new components</span>
+                </div>
+                <div class="commit-item">
+                  <span class="commit-hash">f8c1d9a</span>
+                  <span class="commit-msg">fix: Bug resolution</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Progress Card -->
+            <div class="floating-card card-progress">
+              <div class="card-header">
+                <i class="fas fa-chart-pie"></i>
+                <span>Progress</span>
+              </div>
+              <div class="card-body">
+                <div class="mini-progress">
+                  <div class="progress-fill" style="width: 72%"></div>
+                </div>
+                <span class="progress-text">72% Complete</span>
+              </div>
+            </div>
+
+            <!-- Floating Slack Notification -->
+            <div class="floating-card card-slack">
+              <div class="card-header">
+                <i class="fab fa-slack"></i>
+                <span>New Message</span>
+              </div>
+              <div class="card-body">
+                <p class="notification-text">Great progress on your project! 🎉</p>
+              </div>
+            </div>
+
+            <!-- Floating Technology Icons -->
+            <div class="floating-icons">
+              <div class="tech-icon icon-1">
+                <i class="fab fa-react"></i>
+                <span>React</span>
+              </div>
+              <div class="tech-icon icon-2">
+                <i class="fab fa-js-square"></i>
+                <span>JavaScript</span>
+              </div>
+              <div class="tech-icon icon-3">
+                <i class="fab fa-git-alt"></i>
+                <span>Git</span>
+              </div>
+              <div class="tech-icon icon-4">
+                <i class="fab fa-node-js"></i>
+                <span>Node.js</span>
+              </div>
+              <div class="tech-icon icon-5">
+                <i class="fab fa-docker"></i>
+                <span>Docker</span>
+              </div>
+            </div>
+
+            <!-- Animated Connecting Lines -->
+            <svg class="connecting-lines" viewBox="0 0 600 500">
+              <line class="line-animate" x1="50" y1="50" x2="550" y2="450" />
+              <line class="line-animate" x1="550" y1="50" x2="50" y2="450" />
+            </svg>
+
+            <!-- Background Blobs -->
+            <div class="workspace-blob blob-1"></div>
+            <div class="workspace-blob blob-2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature Cards Section -->
+    <section class="features" id="features">
+      <div class="features-container">
+        <h2 class="section-title">Why Choose Africa Code Academy</h2>
+        <p class="section-subtitle">Everything you need to become an industry-ready software engineer</p>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-hammer"></i>
+            </div>
+            <h3>Learn by Building</h3>
+            <p>Hands-on projects that teach real-world skills and deepen practical experience.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-people-group"></i>
+            </div>
+            <h3>Team Collaboration</h3>
+            <p>Work with peers on Slack & GitHub. Share ideas and grow together.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-rocket"></i>
+            </div>
+            <h3>Real Projects</h3>
+            <p>Solve real problems used in industry and demonstrate technical ability.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Career Growth</h3>
+            <p>Mentorship, feedback, and career guidance to help you progress faster.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-briefcase"></i>
+            </div>
+            <h3>Industry Ready</h3>
+            <p>Graduate with practical skills companies look for in engineering talent.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-globe"></i>
+            </div>
+            <h3>Community</h3>
+            <p>Join a network that supports your journey from learning to launching.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="statistics" id="stats">
+      <div class="stats-container">
+        <div class="stat-card">
+          <div class="stat-number counter" data-target="250">0</div>
+          <div class="stat-label">Students</div>
+          <div class="stat-icon">
+            <i class="fas fa-users"></i>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-number counter" data-target="80">0</div>
+          <div class="stat-label">Projects</div>
+          <div class="stat-icon">
+            <i class="fas fa-code"></i>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-number counter" data-target="25">0</div>
+          <div class="stat-label">Mentors</div>
+          <div class="stat-icon">
+            <i class="fas fa-user-tie"></i>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-number counter" data-target="98">0</div>
+          <div class="stat-label">Completion %</div>
+          <div class="stat-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-number counter" data-target="10">0</div>
+          <div class="stat-label">Partner Companies</div>
+          <div class="stat-icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Developer Dashboard Preview -->
+    <section class="dashboard-preview" id="dashboard">
+      <div class="dashboard-container">
+        <h2 class="section-title">Developer Dashboard</h2>
+        
+        <div class="dashboard-mockup">
+          <div class="dashboard-header">
+            <span class="dashboard-title">Your Learning Dashboard</span>
+            <div class="dashboard-controls">
+              <span class="control red"></span>
+              <span class="control yellow"></span>
+              <span class="control green"></span>
+            </div>
+          </div>
+
+          <div class="dashboard-content">
+            <div class="dashboard-grid">
+              <!-- Assignments Widget -->
+              <div class="dashboard-widget assignments-widget">
+                <div class="widget-header">
+                  <i class="fas fa-tasks"></i>
+                  <span>Assignments</span>
+                </div>
+                <div class="widget-body">
+                  <div class="widget-stat">
+                    <span class="stat-value">12</span>
+                    <span class="stat-text">Completed</span>
+                  </div>
+                  <div class="widget-stat">
+                    <span class="stat-value">3</span>
+                    <span class="stat-text">Pending</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Notifications Widget -->
+              <div class="dashboard-widget notifications-widget">
+                <div class="widget-header">
+                  <i class="fas fa-bell"></i>
+                  <span>Notifications</span>
+                </div>
+                <div class="widget-body">
+                  <div class="notification-item">
+                    <span class="notification-dot"></span>
+                    <span>New assignment posted</span>
+                  </div>
+                  <div class="notification-item">
+                    <span class="notification-dot"></span>
+                    <span>Mentor feedback ready</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Progress Widget -->
+              <div class="dashboard-widget progress-widget">
+                <div class="widget-header">
+                  <i class="fas fa-chart-line"></i>
+                  <span>Progress</span>
+                </div>
+                <div class="widget-body">
+                  <div class="progress-item">
+                    <span class="skill-name">HTML</span>
+                    <div class="skill-bar">
+                      <div class="skill-fill" style="width: 85%"></div>
+                    </div>
+                    <span class="skill-percent">85%</span>
+                  </div>
+                  <div class="progress-item">
+                    <span class="skill-name">CSS</span>
+                    <div class="skill-bar">
+                      <div class="skill-fill" style="width: 72%"></div>
+                    </div>
+                    <span class="skill-percent">72%</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Messages Widget -->
+              <div class="dashboard-widget messages-widget">
+                <div class="widget-header">
+                  <i class="fas fa-comments"></i>
+                  <span>Messages</span>
+                </div>
+                <div class="widget-body">
+                  <div class="message-item">
+                    <span class="message-sender">Mentor</span>
+                    <span class="message-text">Great progress! Keep going 🚀</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Calendar Widget -->
+              <div class="dashboard-widget calendar-widget">
+                <div class="widget-header">
+                  <i class="fas fa-calendar"></i>
+                  <span>Upcoming</span>
+                </div>
+                <div class="widget-body">
+                  <div class="event-item">
+                    <span class="event-time">09:00</span>
+                    <span class="event-name">Git & GitHub</span>
+                  </div>
+                  <div class="event-item">
+                    <span class="event-time">11:00</span>
+                    <span class="event-name">Code Review</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Leaderboard Widget -->
+              <div class="dashboard-widget leaderboard-widget">
+                <div class="widget-header">
+                  <i class="fas fa-trophy"></i>
+                  <span>Leaderboard</span>
+                </div>
+                <div class="widget-body">
+                  <div class="leaderboard-item">
+                    <span class="rank">1st</span>
+                    <span class="player">You</span>
+                    <span class="score">2,450 pts</span>
+                  </div>
+                  <div class="leaderboard-item">
+                    <span class="rank">2nd</span>
+                    <span class="player">Alex</span>
+                    <span class="score">2,380 pts</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Today's Schedule -->
+    <section class="schedule" id="schedule">
+      <div class="schedule-container">
+        <h2 class="section-title">Today's Schedule</h2>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker live"></div>
+            <div class="timeline-content">
+              <div class="schedule-time">09:00 AM</div>
+              <h3>HTML & CSS Fundamentals</h3>
+              <span class="badge badge-live">
+                <i class="fas fa-circle"></i> Live Now
+              </span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker live"></div>
+            <div class="timeline-content">
+              <div class="schedule-time">11:00 AM</div>
+              <h3>Git & GitHub Workflow</h3>
+              <span class="badge badge-live">
+                <i class="fas fa-circle"></i> Live Now
+              </span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker upcoming"></div>
+            <div class="timeline-content">
+              <div class="schedule-time">01:00 PM</div>
+              <h3>Markdown Essentials</h3>
+              <span class="badge badge-upcoming">
+                <i class="fas fa-clock"></i> Upcoming
+              </span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker upcoming"></div>
+            <div class="timeline-content">
+              <div class="schedule-time">02:30 PM</div>
+              <h3>Slack Communication</h3>
+              <span class="badge badge-upcoming">
+                <i class="fas fa-clock"></i> Upcoming
+              </span>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker upcoming"></div>
+            <div class="timeline-content">
+              <div class="schedule-time">04:00 PM</div>
+              <h3>Engineering Residency Q&A</h3>
+              <span class="badge badge-upcoming">
+                <i class="fas fa-clock"></i> Upcoming
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+      <div class="testimonials-container">
+        <h2 class="section-title">Why Students Love ACA</h2>
+
+        <div class="testimonials-slider">
+          <div class="testimonial-card active">
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-quote">
+              "Africa Code Academy transformed my career. The hands-on approach and supportive mentors made all the difference!"
+            </p>
+            <div class="testimonial-author">
+              <div class="author-photo">TS</div>
+              <div class="author-info">
+                <h4>Thato Mokoena</h4>
+                <p>Frontend Developer at PayFast</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-quote">
+              "The curriculum is industry-relevant and the mentorship program helped me land my dream job within weeks."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-photo">KC</div>
+              <div class="author-info">
+                <h4>Kamau Che</h4>
+                <p>Full Stack Engineer at Google</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-quote">
+              "The community here is amazing. You're never alone in your coding journey. Everyone helps each other succeed."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-photo">AM</div>
+              <div class="author-info">
+                <h4>Amara Mensah</h4>
+                <p>Software Developer at Microsoft</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-controls">
+          <button class="testimonial-nav prev" onclick="prevTestimonial()">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="testimonial-dots">
+            <button class="dot active" onclick="showTestimonial(0)"></button>
+            <button class="dot" onclick="showTestimonial(1)"></button>
+            <button class="dot" onclick="showTestimonial(2)"></button>
+          </div>
+          <button class="testimonial-nav next" onclick="nextTestimonial()">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cohort Progress Section -->
+    <section class="cohort" id="cohorts">
+      <div class="cohort-container">
+        <div class="cohort-content">
+          <h2 class="section-title">Current Cohort</h2>
+          <h3 class="cohort-name">Cohort 4.0</h3>
+          <p class="cohort-dates">January 2025 - June 2025</p>
+
+          <div class="cohort-tags">
+            <span class="tag">
+              <i class="fas fa-code"></i> Web Development
+            </span>
+            <span class="tag">
+              <i class="fas fa-users"></i> Team Projects
+            </span>
+            <span class="tag">
+              <i class="fas fa-graduation-cap"></i> Mentorship
+            </span>
+            <span class="tag">
+              <i class="fas fa-briefcase"></i> Career Support
+            </span>
+          </div>
+        </div>
+
+        <div class="cohort-progress-container">
+          <div class="circular-progress">
+            <svg class="progress-ring" width="240" height="240">
+              <circle class="progress-ring-bg" cx="120" cy="120" r="110" />
+              <circle class="progress-ring-fill" cx="120" cy="120" r="110" style="stroke-dasharray: 0; stroke-dashoffset: 0" />
+            </svg>
+            <div class="progress-text">
+              <span class="progress-number">72<span class="percent">%</span></span>
+              <span class="progress-label">Complete</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Learning Paths Section -->
+    <section class="learning-paths" id="learning">
+      <div class="learning-container">
+        <h2 class="section-title">Learning Paths</h2>
+        <p class="section-subtitle">Track your progress across different technologies</p>
+
+        <div class="paths-grid">
+          <div class="path-card">
+            <div class="path-icon">
+              <i class="fab fa-html5"></i>
+            </div>
+            <h3>HTML</h3>
+            <div class="progress-bar">
+              <div class="progress-fill animated" style="width: 0%; max-width: 85%"></div>
+            </div>
+            <span class="progress-text">85%</span>
+          </div>
+
+          <div class="path-card">
+            <div class="path-icon">
+              <i class="fab fa-css3-alt"></i>
+            </div>
+            <h3>CSS</h3>
+            <div class="progress-bar">
+              <div class="progress-fill animated" style="width: 0%; max-width: 78%"></div>
+            </div>
+            <span class="progress-text">78%</span>
+          </div>
+
+          <div class="path-card">
+            <div class="path-icon">
+              <i class="fab fa-js-square"></i>
+            </div>
+            <h3>JavaScript</h3>
+            <div class="progress-bar">
+              <div class="progress-fill animated" style="width: 0%; max-width: 42%"></div>
+            </div>
+            <span class="progress-text">42%</span>
+          </div>
+
+          <div class="path-card">
+            <div class="path-icon">
+              <i class="fab fa-git-alt"></i>
+            </div>
+            <h3>Git & GitHub</h3>
+            <div class="progress-bar">
+              <div class="progress-fill animated" style="width: 0%; max-width: 100%"></div>
+            </div>
+            <span class="progress-text">100%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="get-started">
+      <div class="cta-background">
+        <div class="animated-blob blob-cta-1"></div>
+        <div class="animated-blob blob-cta-2"></div>
+        <div class="animated-blob blob-cta-3"></div>
+      </div>
+
+      <div class="cta-container">
+        <h2>Ready to become an industry-ready software engineer?</h2>
+        <p>Join our next cohort and start building your future today</p>
+        <a href="#" class="btn btn-primary btn-large">
+          <span>Join Engineering Residency</span>
+          <i class="fas fa-arrow-right"></i>
+          <span class="ripple"></span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <!-- Company Info -->
+          <div class="footer-column">
+            <div class="footer-logo">
+              <span>&lt;/&gt;</span>
+              <span>Africa Code Academy</span>
+            </div>
+            <p>Building the next generation of African tech leaders through collaborative learning and real-world projects.</p>
+            <div class="social-links">
+              <a href="#" class="social-link">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-slack"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="#" class="social-link">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-column">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#features">Why ACA</a></li>
+              <li><a href="#programs">Programs</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Resources -->
+          <div class="footer-column">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#">Documentation</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="footer-column">
+            <h4>Newsletter</h4>
+            <p>Stay updated with our latest courses and community news.</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Enter your email" required />
+              <button type="submit" class="btn btn-primary btn-small">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-bottom">
+          <p>Made with <i class="fas fa-heart"></i> in Africa | © 2026 Africa Code Academy. All rights reserved.</p>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Accessibility</a>
+          </div>
+        </div>
+      </div>
     </footer>
+
+    <script src="/assets/js/script.js"></script>
   </body>
 </html>
