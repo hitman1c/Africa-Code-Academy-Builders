@@ -25,10 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       errorMessage.textContent = '';
-      localStorage.setItem('userEmail', email);
-      localStorage.setItem('isLoggedIn', 'true');
       form.reset();
-      window.location.href = 'dashboard.html';
+      window.location.href = 'home.html';
     });
   }
 });
