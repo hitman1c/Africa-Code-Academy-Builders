@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - Africa Code Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      .dashboard-page {
+        background: linear-gradient(135deg, #f8faff 0%, #eef2ff 100%);
+        min-height: 100vh;
+        padding: 2rem 1rem;
+      }
+
+      .dashboard-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .dashboard-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        background: white;
+        border-radius: 1.2rem;
+        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+      }
+
+      .dashboard-header h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 2rem;
+        color: var(--darker);
+      }
+
+      .dashboard-logout {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      .logout-btn {
+        padding: 0.8rem 1.2rem;
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        color: white;
+        border: none;
+        border-radius: 999px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .logout-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(99, 102, 241, 0.3);
+      }
+
+      .dashboard-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .dashboard-card {
+        background: white;
+        border-radius: 1.2rem;
+        padding: 1.5rem;
+        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+        border: 1px solid rgba(99, 102, 241, 0.12);
+      }
+
+      .card-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+        display: grid;
+        place-items: center;
+        margin-bottom: 1rem;
+        background: rgba(99, 102, 241, 0.1);
+        color: var(--primary);
+        font-size: 1.5rem;
+      }
+
+      .card-title {
+        font-weight: 600;
+        color: var(--text-light);
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 0.5rem;
+      }
+
+      .card-value {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: var(--darker);
+      }
+
+      .card-subtitle {
+        font-size: 0.85rem;
+        color: var(--text-light);
+        margin-top: 0.5rem;
+      }
+
+      .welcome-section {
+        background: white;
+        border-radius: 1.2rem;
+        padding: 2rem;
+        box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+        margin-bottom: 2rem;
+      }
+
+      .welcome-section h2 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.5rem;
+        color: var(--darker);
+        margin-bottom: 1rem;
+      }
+
+      .welcome-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+
+      .welcome-text {
+        color: var(--text-light);
+        line-height: 1.8;
+      }
+
+      .creator-info {
+        background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(236, 72, 153, 0.05));
+        border-radius: 1rem;
+        padding: 1.5rem;
+        border: 1px solid rgba(99, 102, 241, 0.12);
+      }
+
+      .creator-info h3 {
+        color: var(--primary);
+        margin-bottom: 0.5rem;
+      }
+
+      .creator-email {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      .creator-role {
+        color: var(--text-light);
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+      }
+
+      @media (max-width: 768px) {
+        .dashboard-header {
+          flex-direction: column;
+          text-align: center;
+          gap: 1rem;
+        }
+
+        .dashboard-header h1 {
+          font-size: 1.5rem;
+        }
+
+        .welcome-content {
+          grid-template-columns: 1fr;
+        }
+
+        .dashboard-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body class="dashboard-page">
+    <div class="dashboard-wrapper">
+      <!-- Header -->
+      <div class="dashboard-header">
+        <div>
+          <h1>Welcome to Your Dashboard</h1>
+        </div>
+        <div class="dashboard-logout">
+          <span style="color: var(--text-light); font-weight: 500;" id="userEmail"></span>
+          <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+      </div>
+
+      <!-- Welcome Section -->
+      <div class="welcome-section">
+        <h2>👋 Welcome to Africa Code Academy</h2>
+        <div class="welcome-content">
+          <div class="welcome-text">
+            <p>
+              You're now part of an elite cohort of software engineers transforming Africa's tech landscape. 
+              Your journey to becoming an industry-ready developer starts here. Take advantage of real-world 
+              projects, mentorship from experienced professionals, and collaboration with talented peers.
+            </p>
+            <p style="margin-top: 1rem;">
+              Ready to build something amazing? Let's get started!
+            </p>
+          </div>
+          <div class="creator-info">
+            <h3>Created by</h3>
+            <div class="creator-email">Seabata Sechaba</div>
+            <div class="creator-role">Lead Developer & Architect</div>
+            <div style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-light);">
+              📧 seabata.sechaba@africacode.academy
+            </div>
+            <div style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-light);">
+              🏗️ Platform built with modern web technologies for the future of African tech.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="dashboard-grid">
+        <div class="dashboard-card">
+          <div class="card-icon">
+            <i class="fas fa-users"></i>
+          </div>
+          <div class="card-title">Active Students</div>
+          <div class="card-value">250+</div>
+          <div class="card-subtitle">Learning & Growing</div>
+        </div>
+
+        <div class="dashboard-card">
+          <div class="card-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <div class="card-title">Projects Built</div>
+          <div class="card-value">56</div>
+          <div class="card-subtitle">Real-world Solutions</div>
+        </div>
+
+        <div class="dashboard-card">
+          <div class="card-icon">
+            <i class="fas fa-user-tie"></i>
+          </div>
+          <div class="card-title">Expert Mentors</div>
+          <div class="card-value">1</div>
+          <div class="card-subtitle">Relebohile Matsoso</div>
+        </div>
+
+        <div class="dashboard-card">
+          <div class="card-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="card-title">Completion Rate</div>
+          <div class="card-value">87%</div>
+          <div class="card-subtitle">Students Progressing</div>
+        </div>
+
+        <div class="dashboard-card">
+          <div class="card-icon">
+            <i class="fas fa-handshake"></i>
+          </div>
+          <div class="card-title">Partner Companies</div>
+          <div class="card-value">2</div>
+          <div class="card-subtitle">Botho University & Partners</div>
+        </div>
+
+        <div class="dashboard-card">
+          <div class="card-icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <div class="card-title">Global Impact</div>
+          <div class="card-value">∞</div>
+          <div class="card-subtitle">Building Africa's Future</div>
+        </div>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="welcome-section" style="background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(236, 72, 153, 0.05));">
+        <h2>Quick Actions</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+          <a href="home.html" style="padding: 1rem; background: white; border-radius: 0.8rem; text-decoration: none; color: var(--primary); font-weight: 600; text-align: center; border: 1px solid rgba(99, 102, 241, 0.2); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+            ← Back to Home
+          </a>
+          <a href="#projects" style="padding: 1rem; background: white; border-radius: 0.8rem; text-decoration: none; color: var(--primary); font-weight: 600; text-align: center; border: 1px solid rgba(99, 102, 241, 0.2); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+            View Projects
+          </a>
+          <a href="#mentors" style="padding: 1rem; background: white; border-radius: 0.8rem; text-decoration: none; color: var(--primary); font-weight: 600; text-align: center; border: 1px solid rgba(99, 102, 241, 0.2); transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+            Meet Mentors
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const userEmail = localStorage.getItem('userEmail') || 'student@africacode.academy';
+        document.getElementById('userEmail').textContent = userEmail;
+      });
+
+      function logout() {
+        localStorage.removeItem('userEmail');
+        localStorage.removeItem('isLoggedIn');
+        window.location.href = 'home.html';
+      }
+    </script>
+  </body>
+</html>
