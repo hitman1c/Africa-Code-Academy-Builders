@@ -49,7 +49,7 @@
             <i class="fas fa-sun"></i>
           </button>
           <a href="login.html" class="btn btn-outline">Login</a>
-          <a href="#get-started" class="btn btn-primary">Get Started</a>
+          <button type="button" class="btn btn-primary" id="openSignupBtnNav">Get Started</button>
         </div>
       </div>
     </nav>
@@ -88,11 +88,11 @@
           </p>
 
           <div class="hero-buttons">
-            <a href="#get-started" class="btn btn-primary btn-large">
+            <button type="button" class="btn btn-primary btn-large" id="openSignupBtn">
               <span>Get Started</span>
               <i class="fas fa-arrow-right"></i>
               <span class="ripple"></span>
-            </a>
+            </button>
             <a href="#programs" class="btn btn-outline btn-large">
               <span>Explore Programs</span>
             </a>
@@ -718,13 +718,49 @@
       <div class="cta-container">
         <h2>Ready to become an industry-ready software engineer?</h2>
         <p>Join our next cohort and start building your future today</p>
-        <a href="#" class="btn btn-primary btn-large">
+        <button type="button" class="btn btn-primary btn-large" id="openSignupBtnCTA">
           <span>Join Engineering Residency</span>
           <i class="fas fa-arrow-right"></i>
           <span class="ripple"></span>
-        </a>
+        </button>
       </div>
     </section>
+    </section>
+
+    <!-- Signup Modal -->
+    <div class="modal-backdrop" id="signupBackdrop" hidden></div>
+    <div class="modal" id="signupModal" role="dialog" aria-modal="true" aria-labelledby="signupTitle" hidden>
+      <div class="modal-content">
+        <header class="modal-header">
+          <h2 id="signupTitle">Join Africa Code Academy</h2>
+          <button id="closeSignup" aria-label="Close signup dialog">×</button>
+        </header>
+        <div class="modal-body">
+          <p class="section-subtitle">Our mission: Build, Learn, Collaborate — tell us what you want to achieve.</p>
+          <form id="signupForm">
+            <label for="signupName">Full name</label>
+            <input id="signupName" name="name" type="text" required />
+
+            <label for="signupEmail">Email</label>
+            <input id="signupEmail" name="email" type="email" required />
+
+            <label for="signupGoal">What do you want to achieve?</label>
+            <textarea id="signupGoal" name="goal" rows="3" required></textarea>
+
+            <label for="signupPassword">Password</label>
+            <input id="signupPassword" name="password" type="password" required />
+
+            <label for="signupPasswordConfirm">Confirm password</label>
+            <input id="signupPasswordConfirm" name="passwordConfirm" type="password" required />
+
+            <div style="display:flex;gap:0.5rem;margin-top:0.75rem;">
+              <button class="btn btn-primary" type="submit">Create Account</button>
+              <button class="btn btn-outline" type="button" id="cancelSignup">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer" id="contact">
@@ -802,5 +838,6 @@
     </footer>
 
     <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/site.js" defer></script>
   </body>
 </html>

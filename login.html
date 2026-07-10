@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body class="login-page">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <!-- Animated Background -->
     <div class="login-bg">
       <!-- Grid Pattern -->
@@ -46,7 +47,7 @@
       <div class="light-beam beam-2"></div>
     </div>
 
-    <div class="login-container">
+    <div class="login-container" id="main-content">
       <!-- Left Panel - Login Form -->
       <div class="login-panel left-panel">
         <!-- Logo -->
@@ -126,7 +127,7 @@
             </button>
 
             <!-- Error Message -->
-            <div class="error-message" id="errorMessage"></div>
+            <div class="error-message" id="errorMessage" role="alert" aria-live="polite"></div>
 
             <!-- Divider -->
             <div class="divider">
@@ -284,6 +285,7 @@
       </div>
     </div>
 
+    <script src="assets/js/site.js" defer></script>
     <script src="assets/js/login.js"></script>
   </body>
 </html>
