@@ -41,15 +41,18 @@ document.addEventListener('DOMContentLoaded', () => {
       const raw = localStorage.getItem('acaAccounts');
       const accounts = raw ? JSON.parse(raw) : [];
       const account = accounts.find(a => a.email === email && a.password === password);
-      if (!account) {
-        errorMessage.textContent = 'Invalid email or password. If you just created an account, use the password you provided.';
-        return;
+
+      // Demo behaviour: allow login even if there is no stored account, but save session info
+      try {
+        localStorage.setItem('sessionEmail', email);
+        localStorage.setItem('sessionSignedInAt', Date.now());
+      } catch (e) {
+        console.warn('Unable to persist session', e);
       }
 
-      // success — clear and redirect
+      // success — clear and redirect to dashboard
       errorMessage.textContent = '';
       form.reset();
-      // Could land on dashboard or home; use dashboard for signed-in users
       window.location.href = 'dashboard.html';
     });
   }
