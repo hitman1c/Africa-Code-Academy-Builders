@@ -2103,3 +2103,32 @@ body {
 .modal-body { margin-top:0.5rem; }
 .modal-body label { display:block; margin-top:0.6rem; font-weight:600; }
 .modal-body input, .modal-body textarea { width:100%; padding:0.6rem; margin-top:0.25rem; border:1px solid var(--border); border-radius:8px; }
+
+/* Testimonials slider */
+.testimonials-slider { position: relative; max-width: 900px; margin: 0 auto; }
+.testimonial-card { display: none; padding: 1.25rem; border-radius: 12px; background: white; box-shadow: var(--shadow-sm); color: var(--darker); }
+.testimonial-card.active { display: block; }
+.testimonial-quote { font-size: 1.05rem; color: var(--text); margin: 0.8rem 0; }
+.testimonial-author { display:flex; gap:0.75rem; align-items:center; }
+.author-photo { width:48px; height:48px; border-radius:8px; background:linear-gradient(135deg,var(--primary),var(--secondary)); color:white; display:grid; place-items:center; font-weight:800; }
+.testimonial-controls { display:flex; justify-content:center; align-items:center; gap:1rem; margin-top:1rem; }
+.testimonial-dots { display:flex; gap:0.5rem; }
+.testimonial-dots .dot { width:10px; height:10px; border-radius:50%; background:var(--border); border:none; cursor:pointer; }
+.testimonial-dots .dot.active { background:var(--primary); box-shadow: 0 4px 12px rgba(99,102,241,0.18); }
+.testimonial-nav { background:transparent; border:1px solid var(--border); padding:0.5rem 0.6rem; border-radius:8px; cursor:pointer; }
+
+/* Schedule controls */
+.schedule-controls { display:flex; gap:0.5rem; justify-content:center; margin-bottom:1rem; }
+.schedule-controls .btn { padding:0.5rem 0.75rem; font-size:0.95rem; }
+
+/* Circular progress ring */
+.progress-ring { transform: rotate(-90deg); }
+.progress-ring-bg { fill: none; stroke: var(--border); stroke-width:16; }
+.progress-ring-fill { fill: none; stroke: linear-gradient(90deg,var(--primary),var(--secondary)); stroke-width:16; stroke-linecap:round; transition: stroke-dashoffset 900ms ease; transform-origin: 50% 50%; }
+
+/* Learning path progress */
+.paths-grid { display:grid; grid-template-columns: repeat(4, 1fr); gap:1rem; }
+.path-card { background:white; padding:1rem; border-radius:12px; box-shadow: var(--shadow-sm); text-align:center; }
+.progress-bar { height:10px; background:var(--lighter); border-radius:999px; overflow:hidden; margin:0.75rem 0; }
+.progress-fill { height:100%; background:linear-gradient(90deg,var(--primary),#34d399); width:0%; transition: width 900ms ease; }
+

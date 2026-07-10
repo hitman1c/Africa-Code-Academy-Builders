@@ -74,4 +74,109 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // --- Testimonials slider ---
+  const testimonials = Array.from(document.querySelectorAll('.testimonial-card'));
+  const dots = Array.from(document.querySelectorAll('.testimonial-dots .dot'));
+  let testimonialIndex = testimonials.findIndex(t => t.classList.contains('active')) || 0;
+
+  function showTestimonial(i) {
+    testimonialIndex = (i + testimonials.length) % testimonials.length;
+    testimonials.forEach((t, idx) => t.classList.toggle('active', idx === testimonialIndex));
+    dots.forEach((d, idx) => d.classList.toggle('active', idx === testimonialIndex));
+  }
+  function nextTestimonial() { showTestimonial(testimonialIndex + 1); }
+  function prevTestimonial() { showTestimonial(testimonialIndex - 1); }
+  // expose globally for inline handlers
+  window.nextTestimonial = nextTestimonial;
+  window.prevTestimonial = prevTestimonial;
+  window.showTestimonial = showTestimonial;
+
+  // auto-advance testimonials
+  let testimonialTimer = setInterval(() => nextTestimonial(), 7000);
+  document.querySelectorAll('.testimonials-slider, .testimonial-controls').forEach(el => {
+    el.addEventListener('mouseenter', () => clearInterval(testimonialTimer));
+    el.addEventListener('mouseleave', () => testimonialTimer = setInterval(() => nextTestimonial(), 7000));
+  });
+
+  // --- Animate progress fills when in view ---
+  const animatedFills = document.querySelectorAll('.progress-fill.animated');
+  const counters = document.querySelectorAll('.counter');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      if (el.classList.contains('progress-fill')) {
+        const style = el.getAttribute('style') || '';
+        const match = style.match(/max-width:\s*(\d+)%/i);
+        const target = match ? match[1] + '%' : el.dataset.target || '100%';
+        el.style.width = target;
+      }
+      if (el.classList.contains('counter')) {
+        const target = parseInt(el.dataset.target || el.getAttribute('data-target') || '0', 10);
+        let current = 0;
+        const step = Math.ceil(target / 60);
+        const intv = setInterval(() => {
+          current += step;
+          if (current >= target) { el.textContent = target; clearInterval(intv); }
+          else el.textContent = current;
+        }, 16);
+      }
+      if (el.classList.contains('progress-ring-fill')) {
+        // animate circular progress
+        const fill = el;
+        const percent = parseInt(fill.getAttribute('data-percent') || '72', 10);
+        const r = parseFloat(fill.getAttribute('r') || '110');
+        const circumference = 2 * Math.PI * r;
+        fill.style.strokeDasharray = `${circumference}`;
+        const offset = circumference * (1 - percent / 100);
+        fill.style.strokeDashoffset = offset;
+      }
+      observer.unobserve(el);
+    });
+  }, { threshold: 0.25 });
+
+  animatedFills.forEach(f => observer.observe(f));
+  counters.forEach(c => observer.observe(c));
+  const ringFill = document.querySelector('.progress-ring-fill');
+  if (ringFill) observer.observe(ringFill);
+
+  // --- Schedule filter controls ---
+  const filterAll = document.getElementById('filterAll');
+  const filterLive = document.getElementById('filterLive');
+  const filterUpcoming = document.getElementById('filterUpcoming');
+  const timelineItems = Array.from(document.querySelectorAll('.timeline-item'));
+
+  function setFilter(mode) {
+    timelineItems.forEach(item => {
+      if (mode === 'all') item.hidden = false;
+      else if (mode === 'live') item.hidden = !item.querySelector('.timeline-marker.live');
+      else if (mode === 'upcoming') item.hidden = !item.querySelector('.timeline-marker.upcoming');
+    });
+    [filterAll, filterLive, filterUpcoming].forEach(b => b && b.setAttribute('aria-pressed', 'false'));
+    if (mode === 'all') filterAll?.setAttribute('aria-pressed', 'true');
+    if (mode === 'live') filterLive?.setAttribute('aria-pressed', 'true');
+    if (mode === 'upcoming') filterUpcoming?.setAttribute('aria-pressed', 'true');
+  }
+  filterAll?.addEventListener('click', () => setFilter('all'));
+  filterLive?.addEventListener('click', () => setFilter('live'));
+  filterUpcoming?.addEventListener('click', () => setFilter('upcoming'));
+
+  // start with auto-filter that shows live first
+  setFilter('all');
+
+  // Smooth scrolling for quick links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const href = a.getAttribute('href');
+      if (href === '#' || href === '#!') return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
 });
