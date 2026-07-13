@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,124 +6,509 @@
     <title>Dashboard - Africa Code Academy</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="/assets/css/style.css" />
   </head>
-  <body class="home-page">
-    <!-- Navbar (copied from home.html for consistency) -->
-    <nav class="navbar">
-      <div class="navbar-container">
-        <a href="/home.html" class="navbar-logo">
-          <span class="logo-icon">&lt;/&gt;</span>
-          <span class="logo-text">Africa Code Academy</span>
-        </a>
-
-        <button class="mobile-menu-toggle" id="mobileMenuToggle">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-        <ul class="navbar-menu" id="navbarMenu">
-          <li><a href="/home.html" class="nav-link">Home</a></li>
-          <li><a href="#dashboard" class="nav-link active">Dashboard</a></li>
-          <li><a href="#programs" class="nav-link">Programs</a></li>
-          <li><a href="#community" class="nav-link">Community</a></li>
-        </ul>
-
-        <div class="navbar-actions">
-          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-            <i class="fas fa-sun"></i>
-          </button>
-          <a href="/login.html" class="btn btn-outline">Login</a>
-          <a href="#" class="btn btn-primary">My Profile</a>
+  <body class="dashboard-app">
+    <div class="dashboard-grid">
+      <header class="top-nav">
+        <div class="top-nav-left">
+          <a href="dashboard.html" class="brand-link">
+            <div class="brand-mark">&lt;/&gt;</div>
+            <div>
+              <strong>Africa Code Academy</strong>
+              <span>Engineering Workspace</span>
+            </div>
+          </a>
         </div>
-      </div>
-    </nav>
-
-    <main class="dashboard-page" style="padding:2rem 0;">
-      <div class="hero-container" style="display:block; width:min(1200px, calc(100% - 2rem)); margin:0 auto;">
-        <header style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;">
+        <div class="top-nav-center">
+          <label class="search-field">
+            <i class="fas fa-search"></i>
+            <input id="dashboardSearch" type="search" placeholder="Search courses, lessons, projects, mentors, documentation" aria-label="Search dashboard" />
+          </label>
+        </div>
+        <div class="top-nav-right">
+          <button class="icon-btn" id="themeToggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+          <button class="icon-btn" aria-label="Notifications"><i class="fas fa-bell"></i><span class="notification-dot">5</span></button>
+          <button class="icon-btn" aria-label="Messages"><i class="fas fa-comment-alt"></i></button>
+          <button class="icon-btn" aria-label="Assistant"><i class="fas fa-robot"></i></button>
+          <div class="header-profile">
+            <img src="Profile.png" alt="Seabata Sechaba" />
+            <div>
+              <strong>Seabata Sechaba</strong>
+              <span>Engineering Resident</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <aside class="dashboard-sidebar">
+        <div class="sidebar-brand">
+          <div class="sidebar-logo">ACA</div>
           <div>
-            <h1 class="section-title">Developer Dashboard</h1>
-            <p class="section-subtitle">Overview of your learning progress and activity</p>
+            <h2>Academy</h2>
+            <p>Productivity</p>
           </div>
-          <div style="display:flex;gap:0.75rem;align-items:center;">
-            <button class="btn btn-outline">Share</button>
-            <button class="btn btn-primary">New Project</button>
+        </div>
+        <nav class="sidebar-nav">
+          <a href="dashboard.html" class="sidebar-link active"><i class="fas fa-chart-line"></i><span>Dashboard</span></a>
+          <a href="#" class="sidebar-link"><i class="fas fa-book"></i><span>Learning</span></a>
+          <a href="#" class="sidebar-link"><i class="fas fa-code"></i><span>Projects</span></a>
+          <a href="#" class="sidebar-link"><i class="fas fa-tasks"></i><span>Assignments</span></a>
+          <a href="#" class="sidebar-link"><i class="fas fa-calendar-alt"></i><span>Calendar</span></a>
+          <a href="#" class="sidebar-link"><i class="fas fa-award"></i><span>Achievements</span></a>
+          <a href="#" class="sidebar-link"><i class="fas fa-chalkboard-teacher"></i><span>Mentors</span></a>
+          <a href="#" class="sidebar-link"><i class="fas fa-users"></i><span>Community</span></a>
+          <a href="#" class="sidebar-link"><i class="fas fa-chart-pie"></i><span>Analytics</span></a>
+          <a href="#" class="sidebar-link"><i class="fas fa-cog"></i><span>Settings</span></a>
+        </nav>
+        <div class="sidebar-profile-card">
+          <div class="profile-meta">
+            <img src="Profile.png" alt="Seabata profile" />
+            <div>
+              <strong>Seabata Jeremiah</strong>
+              <span>Engineering Resident</span>
+            </div>
           </div>
-        </header>
-
-        <section class="dashboard-mockup" style="background:transparent; padding:0;">
-          <div class="dashboard-content">
-            <div class="dashboard-grid" style="display:grid;grid-template-columns:repeat(12,1fr);gap:1rem;">
-              <!-- KPI cards -->
-              <div style="grid-column:span 3;" class="stat-card">
-                <div class="stat-number">0</div>
-                <div class="stat-label">Enrolled Courses</div>
+          <div class="profile-progress">
+            <div>
+              <span>Progress</span>
+              <strong>72%</strong>
+            </div>
+            <div class="progress-bar-small">
+              <div class="progress-bar-fill" style="width:72%"></div>
+            </div>
+          </div>
+          <button class="btn btn-outline btn-block">Logout</button>
+        </div>
+      </aside>
+      <main class="dashboard-main">
+        <section class="hero-banner">
+          <div>
+            <p class="eyebrow-text">Good Morning,</p>
+            <h1>Seabata 👋</h1>
+            <p class="hero-subtitle">Engineering Residency</p>
+            <p class="hero-description">Your workspace is ready. Focus on projects, mentors, GitHub activity, and career goals from one place.</p>
+          </div>
+          <div class="hero-actions">
+            <button class="btn btn-primary">Continue Learning</button>
+            <button class="btn btn-secondary">Join Standup</button>
+            <button class="btn btn-secondary">Open GitHub</button>
+            <button class="btn btn-secondary">View Calendar</button>
+          </div>
+        </section>
+        <section class="quick-actions">
+          <button class="action-card"><i class="fas fa-book-open"></i><span>Continue Learning</span></button>
+          <button class="action-card"><i class="fas fa-video"></i><span>Join Standup</span></button>
+          <button class="action-card"><i class="fas fa-code-branch"></i><span>Open GitHub</span></button>
+          <button class="action-card"><i class="fas fa-calendar-check"></i><span>View Calendar</span></button>
+          <button class="action-card"><i class="fas fa-upload"></i><span>Submit Assignment</span></button>
+          <button class="action-card"><i class="fas fa-user-graduate"></i><span>Ask Mentor</span></button>
+        </section>
+        <section class="stats-grid">
+          <article class="stat-card" data-target="12">
+            <div class="stat-card-icon primary"><i class="fas fa-book"></i></div>
+            <p>Assignments</p>
+            <strong id="assignmentsCount">12</strong>
+          </article>
+          <article class="stat-card" data-target="5">
+            <div class="stat-card-icon success"><i class="fas fa-clipboard-check"></i></div>
+            <p>Projects</p>
+            <strong id="projectsCount">5</strong>
+          </article>
+          <article class="stat-card" data-target="26" data-suffix=" Days">
+            <div class="stat-card-icon accent"><i class="fas fa-fire"></i></div>
+            <p>GitHub Streak</p>
+            <strong id="streakCount">26</strong>
+          </article>
+          <article class="stat-card" data-target="98" data-suffix="%">
+            <div class="stat-card-icon info"><i class="fas fa-user-check"></i></div>
+            <p>Attendance</p>
+            <strong id="attendanceCount">98</strong>
+          </article>
+          <article class="stat-card" data-target="8">
+            <div class="stat-card-icon violet"><i class="fas fa-award"></i></div>
+            <p>Certificates</p>
+            <strong id="certificatesCount">8</strong>
+          </article>
+        </section>
+        <section class="main-content">
+          <div class="card learning-card">
+            <div class="card-header">
+              <div>
+                <p class="eyebrow-text">Continue learning</p>
+                <h3 id="continueTitle">Advanced React</h3>
               </div>
-              <div style="grid-column:span 3;" class="stat-card">
-                <div class="stat-number">0</div>
-                <div class="stat-label">Projects Completed</div>
+              <span class="badge soft">72% complete</span>
+            </div>
+            <div class="learning-details-row">
+              <div>
+                <strong>Lesson</strong>
+                <span>8 of 11</span>
               </div>
-              <div style="grid-column:span 3;" class="stat-card">
-                <div class="stat-number">0</div>
-                <div class="stat-label">Achievements</div>
+              <div>
+                <strong>Time</strong>
+                <span>42 min</span>
               </div>
-              <div style="grid-column:span 3;" class="stat-card">
-                <div class="stat-number">0</div>
-                <div class="stat-label">Community Points</div>
+              <div>
+                <strong>Mentor</strong>
+                <span>Mrs. A. Ndlovu</span>
               </div>
-
-              <!-- Chart -->
-              <div style="grid-column:span 8; background:linear-gradient(145deg,#0f172a,#111827);border-radius:12px;padding:16px;">
-                <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;color:#e6eefc;">
-                  <strong>Progress Overview</strong>
-                  <small style="color:#9aa6c4;">This Week</small>
+            </div>
+            <div class="progress-bar-large">
+              <div id="continueProgress" class="progress-bar-fill" style="width: 72%;"></div>
+            </div>
+            <div class="learning-footer">
+              <div>
+                <strong>Repository</strong>
+                <span>aca-website</span>
+              </div>
+              <button class="btn btn-primary">Continue</button>
+            </div>
+          </div>
+          <div class="charts-grid">
+            <div class="card chart-card">
+              <div class="card-header">
+                <div>
+                  <p class="eyebrow-text">Weekly</p>
+                  <h3>Learning pulse</h3>
                 </div>
-                <canvas id="weeklyChart" width="600" height="260"></canvas>
+                <span class="badge soft">Performance</span>
               </div>
-
-              <!-- Assignments & Activity -->
-              <div style="grid-column:span 4; display:flex;flex-direction:column;gap:1rem;">
-                <div class="dashboard-widget" style="padding:12px;border-radius:10px;">
-                  <div class="widget-header"><i class="fas fa-tasks"></i> Assignments</div>
-                  <div class="widget-body">
-                    <div class="widget-stat"><span class="stat-value">12</span> Completed</div>
-                    <div class="widget-stat"><span class="stat-value">3</span> Pending</div>
-                  </div>
-                </div>
-
-                <div class="dashboard-widget" style="padding:12px;border-radius:10px;">
-                  <div class="widget-header"><i class="fab fa-github"></i> Recent Commits</div>
-                  <div class="widget-body" id="commits">No recent activity</div>
+              <div class="chart-canvas"><canvas id="weeklyChart"></canvas></div>
+            </div>
+            <div class="card chart-card">
+              <div class="card-header">
+                <div>
+                  <p class="eyebrow-text">Monthly</p>
+                  <h3>Course completion</h3>
                 </div>
               </div>
-
-              <!-- More widgets (messages, calendar) -->
-              <div style="grid-column:span 6;" class="dashboard-widget messages-widget">
-                <div class="widget-header"><i class="fas fa-comments"></i> Messages</div>
-                <div class="widget-body"><div class="message-item">Mentor: Great progress! 🚀</div></div>
+              <div class="chart-canvas"><canvas id="monthlyChart"></canvas></div>
+            </div>
+            <div class="card chart-card">
+              <div class="card-header">
+                <div>
+                  <p class="eyebrow-text">Learning Hours</p>
+                  <h3>Weekly usage</h3>
+                </div>
               </div>
-              <div style="grid-column:span 6;" class="dashboard-widget calendar-widget">
-                <div class="widget-header"><i class="fas fa-calendar"></i> Upcoming</div>
-                <div class="widget-body"><div class="event-item"><span class="event-time">09:00</span> Git & GitHub</div></div>
+              <div class="chart-canvas"><canvas id="hoursChart"></canvas></div>
+            </div>
+            <div class="card chart-card">
+              <div class="card-header">
+                <div>
+                  <p class="eyebrow-text">GitHub</p>
+                  <h3>Commit activity</h3>
+                </div>
+              </div>
+              <div class="chart-canvas"><canvas id="commitsChart"></canvas></div>
+            </div>
+          </div>
+          <div class="dual-row">
+            <div class="card project-card">
+              <div class="card-header">
+                <div>
+                  <p class="eyebrow-text">Current project</p>
+                  <h3 id="projectTitle">ACA Website</h3>
+                </div>
+                <span class="badge soft">In Progress</span>
+              </div>
+              <div class="project-summary">
+                <div>
+                  <strong>Status</strong>
+                  <span id="projectStatus">In Progress</span>
+                </div>
+                <div>
+                  <strong>Branch</strong>
+                  <span id="projectBranch">feature/dashboard</span>
+                </div>
+                <div>
+                  <strong>Last commit</strong>
+                  <span id="projectCommit">2 hours ago</span>
+                </div>
+              </div>
+              <div class="project-footer">
+                <div>
+                  <strong>Open issues</strong>
+                  <span id="projectIssues">12</span>
+                </div>
+                <div>
+                  <strong>Open PR</strong>
+                  <span id="projectPr">#21</span>
+                </div>
+                <button class="btn btn-secondary btn-block">Open Repository</button>
+              </div>
+            </div>
+            <div class="card git-card">
+              <div class="card-header">
+                <div>
+                  <p class="eyebrow-text">Git integration</p>
+                  <h3>Branch activity</h3>
+                </div>
+              </div>
+              <div class="git-summary">
+                <div>
+                  <strong>Current Branch</strong>
+                  <span>feature/dashboard</span>
+                </div>
+                <div>
+                  <strong>Latest Commit</strong>
+                  <span>2 hours ago</span>
+                </div>
+                <div>
+                  <strong>Open PR</strong>
+                  <span>#21</span>
+                </div>
+              </div>
+              <div class="contribution-heatmap">
+                <span class="heat-dot filled"></span>
+                <span class="heat-dot filled"></span>
+                <span class="heat-dot filled"></span>
+                <span class="heat-dot"></span>
+                <span class="heat-dot filled"></span>
+                <span class="heat-dot filled"></span>
+                <span class="heat-dot filled"></span>
+                <span class="heat-dot"></span>
+                <span class="heat-dot filled"></span>
+                <span class="heat-dot filled"></span>
+                <span class="heat-dot"></span>
+                <span class="heat-dot filled"></span>
               </div>
             </div>
           </div>
+          <div class="card board-card">
+            <div class="card-header">
+              <div>
+                <p class="eyebrow-text">Assignment board</p>
+                <h3>Kanban workflow</h3>
+              </div>
+              <a href="#" class="link-text">Manage board</a>
+            </div>
+            <div class="board-columns">
+              <div class="board-column">
+                <h4>To Do</h4>
+                <div class="board-item"><span>Design dashboard UI</span><small>Due today</small></div>
+                <div class="board-item"><span>Write component tests</span><small>Due tomorrow</small></div>
+              </div>
+              <div class="board-column">
+                <h4>Doing</h4>
+                <div class="board-item active"><span>Build chart widgets</span><small>In progress</small></div>
+                <div class="board-item"><span>Review GitHub PR</span><small>Code review</small></div>
+              </div>
+              <div class="board-column">
+                <h4>Done</h4>
+                <div class="board-item complete"><span>Update homepage copy</span><small>Completed</small></div>
+              </div>
+            </div>
+          </div>
+          <div class="secondary-grid">
+            <div class="card schedule-card">
+              <div class="card-header">
+                <div>
+                  <p class="eyebrow-text">Today's schedule</p>
+                  <h3>Live lessons</h3>
+                </div>
+                <span class="badge success">Live</span>
+              </div>
+              <div class="schedule-list">
+                <div class="schedule-item"><strong>09:00</strong><span>Stand-up</span><small>Live</small></div>
+                <div class="schedule-item"><strong>10:00</strong><span>HTML</span><small>Workshop</small></div>
+                <div class="schedule-item"><strong>11:00</strong><span>CSS</span><small>Focus time</small></div>
+                <div class="schedule-item"><strong>14:00</strong><span>Git</span><small>Version control</small></div>
+                <div class="schedule-item"><strong>16:00</strong><span>Reflection</span><small>Wrap up</small></div>
+              </div>
+            </div>
+            <div class="card announcements-card">
+              <div class="card-header">
+                <div>
+                  <p class="eyebrow-text">Announcements</p>
+                  <h3>Latest updates</h3>
+                </div>
+              </div>
+              <div class="announcement-item">
+                <strong>Mentor</strong>
+                <span>New assignment posted.</span>
+                <small>10 min ago</small>
+              </div>
+              <div class="announcement-item">
+                <strong>Course</strong>
+                <span>Advanced React content is live.</span>
+                <small>30 min ago</small>
+              </div>
+              <div class="announcement-item">
+                <strong>Hackathon</strong>
+                <span>Register for weekend challenge.</span>
+                <small>1 hour ago</small>
+              </div>
+            </div>
+          </div>
+          <div class="secondary-grid">
+            <div class="card community-card">
+              <div class="card-header">
+                <div>
+                  <p class="eyebrow-text">Community feed</p>
+                  <h3>Student highlights</h3>
+                </div>
+              </div>
+              <div class="community-item">
+                <strong>Sarah shared a new project.</strong>
+                <span>“Launching a fully responsive dashboard.”</span>
+              </div>
+              <div class="community-item">
+                <strong>Neo asked a question.</strong>
+                <span>“How to style a complex grid layout?”</span>
+              </div>
+              <div class="community-item">
+                <strong>Mrs. A. Ndlovu replied.</strong>
+                <span>“Review your Git commit history.”</span>
+              </div>
+            </div>
+            <div class="card badges-card">
+              <div class="card-header">
+                <div>
+                  <p class="eyebrow-text">Achievement badges</p>
+                  <h3>Milestones</h3>
+                </div>
+              </div>
+              <div class="badges-grid">
+                <span class="badge-pill primary">Git Master</span>
+                <span class="badge-pill success">HTML Hero</span>
+                <span class="badge-pill warning">CSS Wizard</span>
+                <span class="badge-pill accent">JavaScript Ninja</span>
+                <span class="badge-pill info">100 Day Streak</span>
+              </div>
+            </div>
+          </div>
+          <div class="card career-card">
+            <div class="card-header">
+              <div>
+                <p class="eyebrow-text">Career hub</p>
+                <h3>Path to success</h3>
+              </div>
+            </div>
+            <div class="career-grid">
+              <a href="#" class="career-link"><i class="fas fa-briefcase"></i><span>Jobs</span></a>
+              <a href="#" class="career-link"><i class="fas fa-graduation-cap"></i><span>Internships</span></a>
+              <a href="#" class="career-link"><i class="fas fa-file-alt"></i><span>Resume</span></a>
+              <a href="#" class="career-link"><i class="fas fa-comments"></i><span>Interview Practice</span></a>
+              <a href="#" class="career-link"><i class="fas fa-linkedin"></i><span>LinkedIn</span></a>
+            </div>
+          </div>
         </section>
+      </main>
+      <aside class="dashboard-right">
+        <div class="right-panel-card status-card">
+          <div class="card-header">
+            <div>
+              <p class="eyebrow-text">Productivity panel</p>
+              <h3>Today</h3>
+            </div>
+            <span class="badge soft">Live</span>
+          </div>
+          <div class="status-grid">
+            <div>
+              <span>Clock</span>
+              <strong id="dashboardClock">09:12 AM</strong>
+            </div>
+            <div>
+              <span>Weather</span>
+              <strong id="dashboardWeather">28°C • Sun</strong>
+            </div>
+          </div>
+        </div>
+        <div class="right-panel-card task-panel">
+          <div class="card-header">
+            <div>
+              <p class="eyebrow-text">Today's tasks</p>
+              <h3>Top priorities</h3>
+            </div>
+          </div>
+          <div class="task-list" id="rightTaskList"></div>
+        </div>
+        <div class="right-panel-card deadline-panel">
+          <div class="card-header">
+            <div>
+              <p class="eyebrow-text">Upcoming deadlines</p>
+              <h3>Deliver soon</h3>
+            </div>
+          </div>
+          <div class="deadline-list" id="rightDeadlineList"></div>
+        </div>
+        <div class="right-panel-card calendar-card">
+          <div class="card-header">
+            <div>
+              <p class="eyebrow-text">Calendar</p>
+              <h3>This month</h3>
+            </div>
+          </div>
+          <div class="calendar-grid">
+            <div><strong>Mon</strong><span>Project</span></div>
+            <div><strong>Tue</strong><span>Review</span></div>
+            <div><strong>Wed</strong><span>Mentor</span></div>
+            <div><strong>Thu</strong><span>Hackathon</span></div>
+            <div><strong>Fri</strong><span>Demo</span></div>
+            <div><strong>Sat</strong><span>Study</span></div>
+            <div><strong>Sun</strong><span>Rest</span></div>
+          </div>
+        </div>
+        <div class="right-panel-card notification-card">
+          <div class="card-header">
+            <div>
+              <p class="eyebrow-text">Notifications</p>
+              <h3>Recent alerts</h3>
+            </div>
+          </div>
+          <div class="notification-list" id="rightNotificationList"></div>
+        </div>
+        <div class="right-panel-card messages-card">
+          <div class="card-header">
+            <div>
+              <p class="eyebrow-text">Messages</p>
+              <h3>Mentors & peers</h3>
+            </div>
+          </div>
+          <div class="message-list" id="messageList"></div>
+        </div>
+        <div class="right-panel-card leaderboard-card">
+          <div class="card-header">
+            <div>
+              <p class="eyebrow-text">Leaderboard</p>
+              <h3>Top learners</h3>
+            </div>
+          </div>
+          <div class="leaderboard-list" id="rightLeaderboardList"></div>
+        </div>
+        <div class="right-panel-card pomodoro-card">
+          <div class="card-header">
+            <div>
+              <p class="eyebrow-text">Focus timer</p>
+              <h3>Pomodoro</h3>
+            </div>
+          </div>
+          <div class="pomodoro-display">
+            <strong>25:00</strong>
+            <span>Focus session</span>
+          </div>
+          <button class="btn btn-primary btn-block">Start</button>
+        </div>
+      </aside>
+      <footer class="dashboard-footer">
+        <span>Version 2026</span>
+        <div>
+          <a href="#">Privacy</a>
+          <a href="#">Support</a>
+          <a href="#">Documentation</a>
+        </div>
+      </footer>
+    </div>
+    <div class="assistant-float">
+      <div>
+        <strong>Need help?</strong>
+        <span>ACA AI</span>
       </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-container">
-        <div style="text-align:center;padding:1rem 0;color:var(--text-light);">Made with <i class="fas fa-heart"></i> in Africa | © 2026 Africa Code Academy</div>
-      </div>
-    </footer>
-
+      <button class="btn btn-primary">Ask Anything</button>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="/assets/js/dashboard.js"></script>
   </body>
